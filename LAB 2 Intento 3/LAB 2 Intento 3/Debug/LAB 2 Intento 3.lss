@@ -1,0 +1,312 @@
+
+LAB 2 Intento 3.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000206  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         00000080  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  00000206  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000235  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000050  00000000  00000000  00000243  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000a62  00000000  00000000  00000293  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000006c9  00000000  00000000  00000cf5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000347  00000000  00000000  000013be  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000084  00000000  00000000  00001708  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000208  00000000  00000000  0000178c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000be  00000000  00000000  00001994  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000040  00000000  00000000  00001a52  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  00000184  00000184  000001f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001a94  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.ADC_init 0000000e  00000176  00000176  000001ea  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.confPWM 00000028  000000d2  000000d2  00000146  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.PWM_1   00000022  000000fa  000000fa  0000016e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.PWM_2   00000022  0000011c  0000011c  00000190  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.PWM_3   00000022  0000013e  0000013e  000001b2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.main    00000052  00000080  00000080  000000f4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__dummy_fini 00000002  0000018c  0000018c  00000200  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.__dummy_funcs_on_exit 00000002  0000018e  0000018e  00000202  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.__dummy_simulator_exit 00000002  00000190  00000190  00000204  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.exit    00000016  00000160  00000160  000001d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text._Exit   00000004  00000188  00000188  000001fc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+   8:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+   c:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  10:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  14:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  18:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  1c:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  20:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  24:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  28:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  2c:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  30:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  34:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  38:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  3c:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  40:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  44:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  48:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  4c:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  50:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  54:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  58:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  5c:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  60:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+  64:	0c 94 c2 00 	jmp	0x184	; 0x184 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 40 00 	call	0x80	; 0x80 <_etext>
+  78:	0c 94 b0 00 	jmp	0x160	; 0x160 <exit>
+
+0000007c <_exit>:
+  7c:	f8 94       	cli
+
+0000007e <__stop_program>:
+  7e:	ff cf       	rjmp	.-2      	; 0x7e <__stop_program>
+
+Disassembly of section .text:
+
+00000184 <__bad_interrupt>:
+ 184:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.ADC_init:
+
+00000176 <ADC_init>:
+#include <util/delay.h>
+
+
+
+void ADC_init() {
+	ADMUX = (1<<REFS0);
+ 176:	80 e4       	ldi	r24, 0x40	; 64
+ 178:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <__TEXT_REGION_LENGTH__+0x7f807c>
+
+	ADCSRA = (1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
+ 17c:	87 e8       	ldi	r24, 0x87	; 135
+ 17e:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <__TEXT_REGION_LENGTH__+0x7f807a>
+ 182:	08 95       	ret
+
+Disassembly of section .text.confPWM:
+
+000000d2 <confPWM>:
+}
+
+
+void confPWM(){
+	// PB1 Activado
+	DDRB |= (1 << DDB2)|(1 << DDB1);
+  d2:	84 b1       	in	r24, 0x04	; 4
+  d4:	86 60       	ori	r24, 0x06	; 6
+  d6:	84 b9       	out	0x04, r24	; 4
+	
+	// no invertido
+	TCCR1A |= (1 << COM1A1)|(1 << COM1B1);
+  d8:	e0 e8       	ldi	r30, 0x80	; 128
+  da:	f0 e0       	ldi	r31, 0x00	; 0
+  dc:	80 81       	ld	r24, Z
+  de:	80 6a       	ori	r24, 0xA0	; 160
+  e0:	80 83       	st	Z, r24
+	
+	// Fast PWM mode usando ICR1 como TOP
+	TCCR1A |= (1 << WGM11);
+  e2:	80 81       	ld	r24, Z
+  e4:	82 60       	ori	r24, 0x02	; 2
+  e6:	80 83       	st	Z, r24
+	TCCR1B |= (1 << WGM12)|(1 << WGM13);
+  e8:	e1 e8       	ldi	r30, 0x81	; 129
+  ea:	f0 e0       	ldi	r31, 0x00	; 0
+  ec:	80 81       	ld	r24, Z
+  ee:	88 61       	ori	r24, 0x18	; 24
+  f0:	80 83       	st	Z, r24
+	
+	// Timer con preescaler de 8
+	TCCR1B |= (1 << CS11);
+  f2:	80 81       	ld	r24, Z
+  f4:	82 60       	ori	r24, 0x02	; 2
+  f6:	80 83       	st	Z, r24
+  f8:	08 95       	ret
+
+Disassembly of section .text.PWM_1:
+
+000000fa <PWM_1>:
+void PWM_1(){
+	#define PWM_Frecuencia 250
+	#define Valor_PWM_1 60
+
+	// Top a 500
+	ICR1 = F_CPU / (8 * PWM_Frecuencia) - 1;
+  fa:	8f e3       	ldi	r24, 0x3F	; 63
+  fc:	9f e1       	ldi	r25, 0x1F	; 31
+  fe:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7f8087>
+ 102:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7f8086>
+	
+	OCR1A = Valor_PWM_1;
+ 106:	8c e3       	ldi	r24, 0x3C	; 60
+ 108:	90 e0       	ldi	r25, 0x00	; 0
+ 10a:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+ 10e:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+	OCR1B = Valor_PWM_1;
+ 112:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7f808b>
+ 116:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7f808a>
+ 11a:	08 95       	ret
+
+Disassembly of section .text.PWM_2:
+
+0000011c <PWM_2>:
+void PWM_2(){
+	#define PWM_Frecuencia 250
+	#define Valor_PWM_2 400
+	
+	// Top a 500
+	ICR1 = F_CPU / (8 * PWM_Frecuencia) - 1;
+ 11c:	8f e3       	ldi	r24, 0x3F	; 63
+ 11e:	9f e1       	ldi	r25, 0x1F	; 31
+ 120:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7f8087>
+ 124:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7f8086>
+	
+	OCR1A = Valor_PWM_2;
+ 128:	80 e9       	ldi	r24, 0x90	; 144
+ 12a:	91 e0       	ldi	r25, 0x01	; 1
+ 12c:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+ 130:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+	OCR1B = Valor_PWM_2;
+ 134:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7f808b>
+ 138:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7f808a>
+ 13c:	08 95       	ret
+
+Disassembly of section .text.PWM_3:
+
+0000013e <PWM_3>:
+void PWM_3(){
+	#define PWM_Frecuencia 250
+	#define Valor_PWM_3 1000
+
+	// Top a 500
+	ICR1 = F_CPU / (8 * PWM_Frecuencia) - 1;
+ 13e:	8f e3       	ldi	r24, 0x3F	; 63
+ 140:	9f e1       	ldi	r25, 0x1F	; 31
+ 142:	90 93 87 00 	sts	0x0087, r25	; 0x800087 <__TEXT_REGION_LENGTH__+0x7f8087>
+ 146:	80 93 86 00 	sts	0x0086, r24	; 0x800086 <__TEXT_REGION_LENGTH__+0x7f8086>
+	
+	OCR1A = Valor_PWM_3;
+ 14a:	88 ee       	ldi	r24, 0xE8	; 232
+ 14c:	93 e0       	ldi	r25, 0x03	; 3
+ 14e:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+ 152:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+	OCR1B = Valor_PWM_3;
+ 156:	90 93 8b 00 	sts	0x008B, r25	; 0x80008b <__TEXT_REGION_LENGTH__+0x7f808b>
+ 15a:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7f808a>
+ 15e:	08 95       	ret
+
+Disassembly of section .text.main:
+
+00000080 <main>:
+	
+	while(!(ADCSRA & (1<<ADIF)));
+	ADCSRA|=(1<<ADIF);
+
+	return (ADC);
+}
+  80:	8a b1       	in	r24, 0x0a	; 10
+  82:	82 60       	ori	r24, 0x02	; 2
+  84:	8a b9       	out	0x0a, r24	; 10
+  86:	0e 94 bb 00 	call	0x176	; 0x176 <ADC_init>
+  8a:	0e 94 69 00 	call	0xd2	; 0xd2 <confPWM>
+  8e:	0e 94 7d 00 	call	0xfa	; 0xfa <PWM_1>
+  92:	2f ef       	ldi	r18, 0xFF	; 255
+  94:	8b e7       	ldi	r24, 0x7B	; 123
+  96:	92 e9       	ldi	r25, 0x92	; 146
+  98:	21 50       	subi	r18, 0x01	; 1
+  9a:	80 40       	sbci	r24, 0x00	; 0
+  9c:	90 40       	sbci	r25, 0x00	; 0
+  9e:	e1 f7       	brne	.-8      	; 0x98 <main+0x18>
+  a0:	00 c0       	rjmp	.+0      	; 0xa2 <main+0x22>
+  a2:	00 00       	nop
+  a4:	0e 94 8e 00 	call	0x11c	; 0x11c <PWM_2>
+  a8:	2f ef       	ldi	r18, 0xFF	; 255
+  aa:	8b e7       	ldi	r24, 0x7B	; 123
+  ac:	92 e9       	ldi	r25, 0x92	; 146
+  ae:	21 50       	subi	r18, 0x01	; 1
+  b0:	80 40       	sbci	r24, 0x00	; 0
+  b2:	90 40       	sbci	r25, 0x00	; 0
+  b4:	e1 f7       	brne	.-8      	; 0xae <main+0x2e>
+  b6:	00 c0       	rjmp	.+0      	; 0xb8 <main+0x38>
+  b8:	00 00       	nop
+  ba:	0e 94 9f 00 	call	0x13e	; 0x13e <PWM_3>
+  be:	2f ef       	ldi	r18, 0xFF	; 255
+  c0:	8b e7       	ldi	r24, 0x7B	; 123
+  c2:	92 e9       	ldi	r25, 0x92	; 146
+  c4:	21 50       	subi	r18, 0x01	; 1
+  c6:	80 40       	sbci	r24, 0x00	; 0
+  c8:	90 40       	sbci	r25, 0x00	; 0
+  ca:	e1 f7       	brne	.-8      	; 0xc4 <main+0x44>
+  cc:	00 c0       	rjmp	.+0      	; 0xce <main+0x4e>
+  ce:	00 00       	nop
+  d0:	de cf       	rjmp	.-68     	; 0x8e <main+0xe>
+
+Disassembly of section .text.__dummy_fini:
+
+0000018c <_fini>:
+ 18c:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+0000018e <__funcs_on_exit>:
+ 18e:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+00000190 <__simulator_exit>:
+ 190:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000160 <exit>:
+ 160:	ec 01       	movw	r28, r24
+ 162:	0e 94 c7 00 	call	0x18e	; 0x18e <__funcs_on_exit>
+ 166:	0e 94 c6 00 	call	0x18c	; 0x18c <_fini>
+ 16a:	ce 01       	movw	r24, r28
+ 16c:	0e 94 c8 00 	call	0x190	; 0x190 <__simulator_exit>
+ 170:	ce 01       	movw	r24, r28
+ 172:	0e 94 c4 00 	call	0x188	; 0x188 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000188 <_Exit>:
+ 188:	0e 94 3e 00 	call	0x7c	; 0x7c <_exit>
