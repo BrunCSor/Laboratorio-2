@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="Lab 2 Intrupciones 2.0.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>32768</length>                 
+      <used>898</used>                     
+      <free>31870</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>2048</length>                 
+      <used>2</used>                     
+      <free>2046</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
